@@ -1,0 +1,20 @@
+.env
+cache/
+logs/
+
+# Test Output
+.coverage
+coverage/
+licenses.txt
+examples_notebooks/*/data
+tests/fixtures/cache
+tests/fixtures/*/cache
+tests/fixtures/*/output
+output/lancedb
+
+# Random
+*.log*
+.venv
+venv/
+.conda
+.tmp
