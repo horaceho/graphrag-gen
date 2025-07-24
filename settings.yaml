@@ -46,13 +46,15 @@ models:
 
 input:
   type: file # or blob
-  file_type: text # [csv, text, json]
+  file_type: json # [csv, text, json]
   base_dir: "input"
+  metadata: [book,cv]
 
 chunks:
-  size: 1200
+  size: 300 # Character count for Chinese
   overlap: 100
-  group_by_columns: [id]
+  group_by_columns: [book,cv]
+  prepend_metadata: True
 
 ### Output/storage settings ###
 ## If blob storage is specified in the following four sections,
@@ -61,7 +63,7 @@ chunks:
 output:
   type: file # [file, blob, cosmosdb]
   base_dir: "output"
-    
+
 cache:
   type: file # [file, blob, cosmosdb]
   base_dir: "cache"
@@ -96,7 +98,7 @@ summarize_descriptions:
 
 extract_graph_nlp:
   text_analyzer:
-    extractor_type: regex_english # [regex_english, syntactic_parser, cfg]
+    extractor_type: syntactic_parser # [regex_english, syntactic_parser, cfg]
 
 cluster_graph:
   max_cluster_size: 10
