@@ -1,6 +1,7 @@
 .env
 cache/
 logs/
+output-????-??-??*/
 
 # Test Output
 .coverage
