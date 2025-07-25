@@ -13,9 +13,9 @@ models:
     api_key: ${GRAPHRAG_API_KEY} # set this in the generated .env file
     # audience: "https://cognitiveservices.azure.com/.default"
     # organization: <organization_id>
-    model: gpt-4-turbo-preview # [gpt-4.1, gpt-4-turbo-preview]
+    model: gpt-4.1 # [gpt-4.1, gpt-4-turbo-preview]
     # deployment_name: <azure_model_deployment_name>
-    # encoding_model: cl100k_base # automatically set by tiktoken if left undefined
+    encoding_model: cl100k_base # automatically set by tiktoken if left undefined, default: cl100k_base
     model_supports_json: true # recommended if this is available for your model.
     concurrent_requests: 25 # max number of simultaneous LLM requests allowed
     async_mode: threaded # or asyncio
